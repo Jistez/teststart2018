@@ -19,13 +19,13 @@
 <style>
 article{
 	width:500px;
-	
+
 	background-color:#dddddd;
 }
 fieldset{
-	
+
 	width:600px;
-	
+
 }
 legend{
 	font-size:20px;
@@ -48,10 +48,10 @@ legend{
 <div class="row">
 	<div class="col-sm-6">
 	<img src="bilder/bild1.jpg"/>
-	
+
 	<br><br>
 <form>
-  
+
   <div class="form-group col-xs-5">
     <label for="exampleSelect1">Antal</label>
     <select class="form-control" id="exampleSelect1">
@@ -62,14 +62,14 @@ legend{
       <option>5</option>
     </select>
   </div>
-  
+
   <button type="submit" class="btn btn-primary">Köp</button>
 </form>
-	
-	pris:100kr
+
+	pris per styck:100kr
 	</div>
 	<div class="col-sm-6">
-	
+
 Nya X1 Carbon har kolfiberförstärkt chassi och är precis lika tålig som föregångaren. Den har dessutom mindre format och är vår lättaste och tunnaste X1 Carbon någonsin. Ändå är den packad med mer kraft än någonsin: Windows 10 Pro, sjunde generationens Intel® Core™-processorer, blixtsnabb Thunderbolt 3 och 14-tums Quad-HD-bildskärm (Quad-HD endast tillgängligt på vissa modeller).
 
 
