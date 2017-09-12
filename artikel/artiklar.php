@@ -1,8 +1,11 @@
+<?php
+require 'dbconnect.php';
+$pdo=anslutdb();
+$result=$pdo->query('select * from artikel');
 
+//print_r($result->fetch());
 
-
-
-
+?>
 
 
 <html lang="sv">
@@ -41,15 +44,22 @@
 
 
 <body>
+
+<?php
+
+while(($data=$result->fetch())!==false){
+
+
+echo<<<ARTIKEL
 <fieldset>
-		<legend>Artikelnamn</legend>
+		<legend>{$data['Art_namn']}</legend>
 		<article>
 			<div class="row">
 				<div class="col-sm-6">
-					<img src="bilder/bild1.jpg"/>
+					<img src="bilder/{$data['Bild']}"/>
 
 					<br><br>
-					<form>
+					<form action="order.php" method="GET">
 
 						<div class="form-group col-xs-5">
 							<label for="exampleSelect1">Antal</label>
@@ -64,13 +74,12 @@
 
 						<button type="submit" class="btn btn-primary">Köp</button>
 					</form>
-					
-					pris per styck:200kr
+
+					pris per styck:{$data['Pris']}kr
 				</div>
 				<div class="col-sm-6">
 
-					Nya X1 Carbon har kolfiberförstärkt chassi och är precis lika tålig som föregångaren. Den har dessutom mindre format och är vår lättaste och tunnaste X1 Carbon någonsin. Ändå är den packad med mer kraft än någonsin: Windows 10 Pro, sjunde generationens Intel® Core™-processorer, blixtsnabb Thunderbolt 3 och 14-tums Quad-HD-bildskärm (Quad-HD endast tillgängligt på vissa modeller).
-
+				{$data['Info']}
 
 				</div>
 			</div>
@@ -79,8 +88,10 @@
 		</article>
 
 	</fieldset>
+ARTIKEL;
 
-
+}
+?>
 </body>
 
 
