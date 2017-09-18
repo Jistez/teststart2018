@@ -1,5 +1,6 @@
 <?php
 require 'dbconnect.php';
+
 $pdo=anslutdb();
 $result=$pdo->query('select * from artikel');
 
@@ -59,11 +60,11 @@ echo<<<ARTIKEL
 					<img src="bilder/{$data['Bild']}"/>
 
 					<br><br>
-					<form action="order.php" method="GET">
-
+					<form action="cart.php" method="GET">
+							<input type="hidden" name="art_id" value="{$data['Artid_pk']}">
 						<div class="form-group col-xs-5">
 							<label for="exampleSelect1">Antal</label>
-							<select class="form-control" id="exampleSelect1">
+							<select class="form-control" id="antal" name="antal" >
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
