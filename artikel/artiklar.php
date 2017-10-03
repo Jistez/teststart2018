@@ -4,6 +4,8 @@ require 'dbconnect.php';
 $pdo=anslutdb();
 $result=$pdo->query('select * from artikel');
 
+
+
 //print_r($result->fetch());
 
 ?>
@@ -63,7 +65,7 @@ echo<<<ARTIKEL
 					<form action="cart.php" method="GET">
 							<input type="hidden" name="art_id" value="{$data['Artid_pk']}">
 						<div class="form-group col-xs-5">
-							<label for="exampleSelect1">Antal</label>
+						<label for="antal">Antal</label>
 							<select class="form-control" id="antal" name="antal" >
 								<option>1</option>
 								<option>2</option>
