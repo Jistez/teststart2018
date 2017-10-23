@@ -1,0 +1,36 @@
+
+.btn{
+background:grey;
+}
+
+
+
+.vent{
+    
+color:#ffffff;
+margin-right:20px;
+}
+
+body {
+
+margin:auto;
+
+}
+
+.logo{
+
+
+background-image: url("../site_template/bilder/logo.png");
+background-repeat:no-repeat;
+height:150px;
+
+
+}
+.ventstate{
+
+font-size:22px;
+color:blue;
+
+
+
+}

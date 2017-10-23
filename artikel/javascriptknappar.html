@@ -1,0 +1,21 @@
+
+<button type="button" class="btn" id="23">knapp1</button>
+  
+<button type="button" class="btn" id="25">knapp2</button>
+
+<script>
+
+
+var classname = document.getElementsByClassName("btn");
+
+var func = function() {
+    var attribute = this.getAttribute("id");
+    alert(attribute);
+};
+
+for (var i = 0; i < classname.length; i++) {
+    classname[i].addEventListener('click', func, false);
+}
+
+
+</script>
